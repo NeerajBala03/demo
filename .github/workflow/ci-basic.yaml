@@ -1,0 +1,15 @@
+name: basic-pipeline
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu:latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+
+    - name: print info
+      run: echo "CI TRIGGERED"
