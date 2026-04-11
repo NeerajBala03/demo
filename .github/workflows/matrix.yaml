@@ -1,0 +1,14 @@
+name: matrix
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node: [16,18,20]
+
+    steps:
+      - run: echo "Node ${{ matrix.node }}"
